@@ -4,12 +4,6 @@ import axios from 'axios';
 const TOTAL_ROUNDS = 6;
 const CHOICES = ['stone', 'paper', 'scissors'];
 
-const CHOICE_EMOJI = {
-  stone: '✊',
-  paper: '✋',
-  scissors: '✌️'
-};
-
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 
 function GamePage() {
@@ -192,7 +186,6 @@ function GamePage() {
             <button
               key={choice}
               className="btn choice-btn"
-              data-emoji={CHOICE_EMOJI[choice]}
               onClick={() => handleChoiceClick(choice)}
             >
               {choice}
